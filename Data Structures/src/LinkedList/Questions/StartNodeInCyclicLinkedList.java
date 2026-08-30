@@ -74,7 +74,7 @@ public class StartNodeInCyclicLinkedList {
         display(head);
         convertToCycle(head,3);
         int length = lengthOfCycle(head);
-        System.out.println("Cycle starts at: "+searchStartCycle(head, length));
+        System.out.println("Cyclic node starts  at: "+searchStartCycle(head, length));
 
     }
 }
