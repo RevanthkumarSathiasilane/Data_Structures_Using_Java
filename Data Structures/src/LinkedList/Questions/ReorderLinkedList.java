@@ -50,7 +50,7 @@ public class ReorderLinkedList {
     static Node reorder(Node h1,Node h2){
         Node dummy = new Node(-1);
         Node current = dummy;
-        while(h1!= null && h2!=null){
+        while(h2!=null){
             Node next1 = h1.next;
             Node next2 = h2.next;
 
