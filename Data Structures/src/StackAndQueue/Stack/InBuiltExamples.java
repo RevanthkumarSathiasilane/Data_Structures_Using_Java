@@ -1,4 +1,4 @@
-package StackAndQueue;
+package StackAndQueue.Stack;
 import java.util.*;
 
 public class InBuiltExamples {

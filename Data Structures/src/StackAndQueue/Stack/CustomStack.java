@@ -1,4 +1,4 @@
-package StackAndQueue;
+package StackAndQueue.Stack;
 
 public class CustomStack {
   protected int[] data;
@@ -13,35 +13,35 @@ public class CustomStack {
         this.data = new int[size];
     }
 
-    public boolean push(int data){
+    public boolean push(int item){
         if(isFull()){
             System.out.println("Stack us full");
             return false;
         }
         ptr++;
-        this.data[ptr] = data;
+        this.data[ptr] = item;
         return true;
     }
 
-    public int pop() throws Exception{
+    public int pop() throws StackException {
         if(isEmpty()){
-            throw new Exception("Cannot pop from an empty stack!!");
+            throw new StackException("Cannot pop from an empty stack!!");
         }
 //        int val = data[ptr--];
 //        return val;
         return data[ptr--];
     }
-    public int peek() throws Exception{
+    public int peek() throws StackException{
         if(isEmpty()){
-            throw new Exception("Cannot find peek from an empty stack!!");
+            throw new StackException("Cannot find peek from an empty stack!!");
         }
         return data[ptr];
     }
-    private boolean isFull(){
+    public boolean isFull(){
         return ptr == data.length-1;//ptr is at last index
     }
 
-    private boolean isEmpty(){
+    public boolean isEmpty(){
         return ptr == -1;
     }
 
