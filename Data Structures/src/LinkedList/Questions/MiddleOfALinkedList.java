@@ -19,18 +19,15 @@ public class MiddleOfALinkedList {
     }
     static int middleNode(Node head){
         Node fast = head;
-       Node slow = null;
+       Node slow = head;
         while(fast!=null && fast.next!=null){
             fast = fast.next.next;
-            if(slow == null) slow = head;
-            else slow = slow.next;
+            slow = slow.next;
         }
-        Node mid = slow.next;
-        slow.next = null;
-        return mid.value;
+        return slow.value;
     }
     public static void main(String[] args) {
-        Node head = create(new int[]{1,2,3,4,5});
+        Node head = create(new int[]{10,20,40,50});
         System.out.println("Middle Node: "+middleNode(head));
     }
 }
